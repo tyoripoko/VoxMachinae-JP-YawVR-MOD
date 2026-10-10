@@ -1,0 +1,26 @@
+﻿=========================================================
+ Image フォルダについて / About the Image folder
+=========================================================
+
+このフォルダに含まれる画像（logo.png / recent.png / wide.png）は、
+YawVR GameLink のプラグイン一覧に表示されるアイコンとして、
+対象ゲームを識別する目的でのみ使用しています。
+
+これらは Vox Machinae の公式アートワークであり、
+著作権は Space Bullet Dynamics Corporation に帰属します。
+本リポジトリの MIT ライセンスは、これらの画像には適用されません。
+
+権利者からの申し出があれば、速やかに差し替え／削除します。
+
+---------------------------------------------------------
+
+The images in this folder (logo.png / recent.png / wide.png) are used
+solely as plugin icons in the YawVR GameLink plugin list, for the
+purpose of identifying the target game.
+
+They are official Vox Machinae artwork and remain the property of
+Space Bullet Dynamics Corporation. The MIT license of this repository
+does NOT apply to these images.
+
+They will be replaced or removed promptly upon request from the
+rights holder.

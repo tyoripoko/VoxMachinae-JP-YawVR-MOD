@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>VoxMachinaePlugin</AssemblyName>
+    <RootNamespace>VoxMachinaePlugin</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <OutputPath>bin\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="YawGLAPI">
+      <HintPath>YawGLAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+  </ItemGroup>
+
+  <!--
+    GameLink の一覧に表示されるアイコン3枚だけを埋め込む。
+    以前は Image\*.png をワイルドカードで全部埋め込んでいたため、
+    未使用の画像まで含めて DLL が 2.29MB に膨らんでいた。
+    画像を増やすときは、ここに明示的に追加すること。
+  -->
+  <ItemGroup>
+    <EmbeddedResource Include="Image\logo.png">
+      <LogicalName>VoxMachinaePlugin.logo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\recent.png">
+      <LogicalName>VoxMachinaePlugin.recent.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\wide.png">
+      <LogicalName>VoxMachinaePlugin.wide.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

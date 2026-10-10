@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    配布用に自己完結発行(SelfContained)をやめ、フレームワーク依存に変更。
+    161MB から約200KB になります。
+    VR版(VoxSubtitleVROverlay)も net8.0-windows のフレームワーク依存なので、
+    利用者の前提条件は「.NET 8 Desktop Runtime」のみに統一されます。
+
+    発行コマンド:
+      dotnet publish -c Release -o publish_fd
+    出力された VoxSubtitleOverlay.exe / .dll / .deps.json / .runtimeconfig.json
+    を配布してください。
+
+    自己完結版(単一EXE)に戻したい場合は、下の SelfContained を true、
+    PublishSingleFile を true にして発行してください。
+  -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>VoxSubtitleOverlay</AssemblyName>
+    <Version>1.2.0</Version>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>false</PublishSingleFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+</Project>

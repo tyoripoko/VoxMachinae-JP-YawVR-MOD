@@ -1,0 +1,24 @@
+# ビルド出力
+bin/
+obj/
+publish/
+publish_fd/
+*.user
+
+# 配布物（Releasesで配るのでリポジトリには入れない）
+*.zip
+
+# ゲーム由来・機械生成（絶対にコミットしない）
+VoxSource/
+Il2CppAssemblies/
+cpp2il_out/
+Managed/
+MelonLoader/
+*.log
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+.vs/
+YawGLAPI.dll

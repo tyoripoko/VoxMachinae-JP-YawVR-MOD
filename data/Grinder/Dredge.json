@@ -1,0 +1,147 @@
+{
+  "_profile_info": {
+    "robot":   "Dredge",
+    "type":    "biped",
+    "version": "1.0",
+    "note":    "全値はコード定数のデフォルト値。調整後は version を上げること。"
+  },
+
+  "_channel_map": {
+    "ch00": "Yaw",
+    "ch01": "Pitch",
+    "ch02": "Roll",
+    "ch03": "Walk",
+    "ch04": "Turning",
+    "ch05": "Cockpit_Pitch",
+    "ch06": "Cockpit_Roll",
+    "ch07": "Cockpit_Yaw",
+    "ch08": "Landing_Pitch",
+    "ch09": "Landing_Roll",
+    "ch10": "Landing_Yaw",
+    "ch11": "Shield_Pitch",
+    "ch12": "Shield_Roll",
+    "ch13": "Shield_Yaw",
+    "ch14": "Foot_Vib_Amp",
+    "ch15": "Foot_Vib_Hz",
+    "ch16": "Turning_Vib_Amp",
+    "ch17": "Turning_Vib_Hz",
+    "ch18": "Cockpit_Vib_Amp",
+    "ch19": "Cockpit_Vib_Hz",
+    "ch20": "Jet_Vib_Amp",
+    "ch21": "Jet_Vib_Hz",
+    "ch22": "Weapon_Vib_Amp",
+    "ch23": "Weapon_Vib_Hz"
+  },
+
+  "yaw": {
+    "_note": "Yawチャンネル(ch00)・旋回演出(ch04)の制御パラメータ",
+    "yaw_rate_filter":       75.0,
+    "yaw_rate_filter_note":  "blips角速度フィルタ閾値(°/s)。この値を超えた変化をスナップとして除外。ロボが速く旋回する場合は大きくする",
+    "blips_stabilize_delay": 5.0,
+    "blips_stabilize_note":  "MechRoot検出後にblips基準角度を確定するまでの待機秒数",
+    "turning_deadzone":      10.0,
+    "turning_deadzone_note": "旋回とみなす最低角速度(°/s)。これ以下はTurning出力=0",
+    "turning_deadzone_max":  60.0,
+    "turning_deadzone_note2":"Turning出力が最大(1.0)になる角速度(°/s)。ロボの最大旋回速度に合わせる",
+    "turning_curve":         2.0,
+    "turning_curve_note":    "旋回出力の非線形カーブ(乗数)。1.0=線形, 2.0=二乗(小さい旋回を抑制), 0.5=緩やか",
+    "mult_yaw":              1.0,
+    "mult_turning":          5.0,
+    "smoothing":             0.2,
+    "smoothing_note":        "指数移動平均係数(0〜1)。小さいほど滑らか・遅延大。Pitch/Roll/Yaw/Walk/Turningに共通適用"
+  },
+
+  "pitch_roll": {
+    "_note": "胴体傾斜チャンネル(ch01/02)。ロボの最大傾斜角に応じて正規化ノルムを調整",
+    "mult_pitch": 1.0,
+    "mult_roll":  1.0,
+    "pitch_norm": 30.0,
+    "pitch_note": "Pitch方向の正規化基準角度(度)。この角度でch01=1.0出力",
+    "roll_norm":  30.0,
+    "roll_note":  "Roll方向の正規化基準角度(度)。この角度でch02=1.0出力"
+  },
+
+  "walk": {
+    "_note": "歩行縦揺れ(ch03)・歩行振動(ch14/15)の制御パラメータ",
+    "mult_walk":     3.0,
+    "accel_scale":   50.0,
+    "accel_note":    "歩行加速度をch03出力値に変換するスケール。値を下げると感度UP(小さい揺れも拾う)",
+    "vib_walk_dur":  0.5,
+    "vib_walk_note": "歩行1歩ごとのWalk_Vib持続時間(秒)",
+    "foot_walk_amp": 300.0,
+    "foot_walk_hz":  18.0
+  },
+
+  "landing": {
+    "_note": "着地衝撃チャンネル(ch08/09/10)・着地振動(ch14/15)の制御パラメータ",
+    "mult_landing_pitch":  1.5,
+    "mult_landing_roll":   1.5,
+    "mult_landing_yaw":    1.5,
+    "vib_land_dur":        2.0,
+    "vib_land_note":       "着地振動の持続時間(秒)",
+    "foot_land_amp":       300.0,
+    "foot_land_hz":        60.0,
+    "fall_vel_thresh":     -5.0,
+    "fall_vel_note":       "落下判定を開始する垂直速度(m/s、負値)。ロボが遅い場合は-3.0〜-4.0に調整",
+    "min_fall_dist":       10.0,
+    "min_fall_note":       "着地判定に必要な最小落下距離(m)。小さいロボは小さくする",
+    "land_accel_min":      40.0,
+    "land_accel_min_note": "着地と判定する最小衝撃加速度",
+    "land_accel_max":      600.0,
+    "land_accel_max_note": "Landing揺れが最大になる衝撃加速度(この値でch08〜10=1.0)",
+    "land_freq_min":       2.5,
+    "land_freq_max":       3.0
+  },
+
+  "damage": {
+    "_note": "被ダメージ揺れ(ch05/06/07)・ダメージ振動(ch18/19)の制御パラメータ",
+    "mult_damage_pitch": 1.0,
+    "mult_damage_roll":  3.0,
+    "mult_damage_yaw":   3.0,
+    "dmg_accel_scale":   50.0,
+    "dmg_deadzone":      0.1,
+    "damage_vib_amp":    100.0,
+    "damage_vib_hz":     50.0
+  },
+
+  "escape": {
+    "_note": "ブラストシールド開閉・脱出時の揺れ(ch11/12/13)の制御パラメータ",
+    "mult_escape_pitch": 4.0,
+    "mult_escape_roll":  4.0,
+    "mult_escape_yaw":   4.0
+  },
+
+  "turning_vib": {
+    "_note": "旋回中の微振動(ch16/17)の制御パラメータ",
+    "turning_vib_amp_scale": 100.0,
+    "turning_vib_amp_note":  "_turnVibValue(0〜1)にこの値を乗じてch16へ出力",
+    "turning_vib_hz":        70.0
+  },
+
+  "jet": {
+    "_note": "ジェット噴射振動(ch20/21)の制御パラメータ",
+    "jet_vib_amp":            100.0,
+    "jet_vib_hz":             10.0,
+    "jet_velocity_threshold": 2.0,
+    "jet_note":               "垂直速度がこの値(m/s)を超えたときジェット噴射と判定"
+  },
+
+  "rail": {
+    "_note": "レールガンチャージ振動(ch22/23)。装備しない場合は enabled を false に",
+    "enabled":          false,
+    "rail_charge_time": 2.7,
+    "rail_start_amp":   45.0,
+    "rail_end_amp":     100.0,
+    "rail_start_hz":    60.0,
+    "rail_end_hz":      12.0,
+    "rail_curve":       0.4,
+    "rail_curve_note":  "チャージ振動の増加カーブ(乗数)。0.4=序盤で素早く立ち上がる"
+  },
+
+  "drill": {
+    "_note": "ドリル武器振動(ch22/23)。装備しない場合は enabled を false に",
+    "enabled":   false,
+    "drill_amp": 100.0,
+    "drill_hz":  10.0
+  }
+}

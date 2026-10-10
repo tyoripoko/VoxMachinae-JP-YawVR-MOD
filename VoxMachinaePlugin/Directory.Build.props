@@ -1,0 +1,9 @@
+<Project>
+  <!--
+    ここの GAME_PATH を一度だけ設定すれば VoxTelemetry.csproj 側は触らなくて済む。
+    このファイルを VoxTelemetry.csproj と同じフォルダに置いてください。
+  -->
+  <PropertyGroup>
+    <GAME_PATH>D:\Steam\steamapps\common\Vox Machinae</GAME_PATH>
+  </PropertyGroup>
+</Project>
