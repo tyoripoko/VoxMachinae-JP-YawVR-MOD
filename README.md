@@ -1,138 +1,70 @@
-# Vox Machinae — Japanese Subtitles & YawVR (Yaw2) Motion MOD
+This is a place to store all projects I create for the integration of bhaptics gear into various older or unsupported VR games.
 
-[日本語](#日本語) | [English](#english)
+If you are looking for a very brief introduction how to mod for bhaptics integration, I somewhat cleaned up the code a tiny little bit and added some pointers to the [Shadow Legend VR](https://github.com/floh-bhaptics/ShadowLegend_bhaptics) repository. So definitely check that one out, and not the other, even uncleaner ones. ;-)
 
-A MelonLoader mod for **Vox Machinae** that adds hand-translated Japanese
-subtitles and drives a **YawVR Yaw2** motion rig from 24 channels of game
-telemetry.
+If you have any issues or suggestions, the best way to contact me is to ping me (Florian) on the bhaptics Discord: [https://discord.gg/ThgMunk5](https://discord.gg/ThgMunk5)
 
-[![Download](https://img.shields.io/github/v/release/tyoripoko/VoxMachinae-JP-YawVR-MOD?label=download&style=for-the-badge)](https://github.com/tyoripoko/VoxMachinae-JP-YawVR-MOD/releases/latest)
+Here is a list of the published mods so far:
 
----
+| Mod link | Game links | Video preview | Supported gear | ToDo on Official list? |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| [H3VR](https://h3vr.thunderstore.io/package/bhaptics_modding/H3VR_bhaptics/) | [Steam](https://store.steampowered.com/app/450540/Hot_Dogs_Horseshoes__Hand_Grenades/) | [bhaptics](https://www.youtube.com/watch?v=GIGNdxTLIS8) | vest, arms, hands, Tactal |  |
+| [Until You Fall](https://www.nexusmods.com/untilyoufall/mods/1) | [Steam](https://store.steampowered.com/app/858260/Until_You_Fall/) [Oculus](https://www.oculus.com/experiences/rift/3629229127102494) | [bhaptics](https://www.youtube.com/watch?v=WoUzTPNt608) | vest, arms, hands |  |
+| [Budget Cuts 2](https://www.nexusmods.com/budgetcuts2missioninsolvency/mods/1) | [Steam](https://store.steampowered.com/app/1092430/Budget_Cuts_2_Mission_Insolvency/) | [Floh](https://www.youtube.com/watch?v=oUevuz3uzw8) | vest, arms, Tactal |  |
+| [I Expect You To Die 2](https://www.nexusmods.com/iexpectyoutodie2/mods/2) | [Steam](https://store.steampowered.com/app/1499120/I_Expect_You_To_Die_2/) [Oculus](https://www.oculus.com/experiences/quest/2970998659623177/) | [bhaptics](https://www.youtube.com/watch?v=rsHtgZWHWlI) | vest, arms, Tactal |  |
+| [Vertigo Remastered](https://www.nexusmods.com/vertigoremastered/mods/1) | [Steam](https://store.steampowered.com/app/1318090/Vertigo_Remastered/) | [bhaptics](https://www.youtube.com/watch?v=RPFSdMht8Wo) | vest, arms, hands, feet, Tactal |  |
+| [Pistol Whip](https://www.nexusmods.com/pistolwhip/mods/1) | [Steam](https://store.steampowered.com/app/1079800/Pistol_Whip/) [Oculus](https://www.oculus.com/experiences/rift/2314034471989368/) | [Floh](https://www.youtube.com/watch?v=1aSlRRlkr1g) | vest, arms, hands, feet, Tactal |  |
+| [Warhammer 40,000: Battle Sister](https://www.nexusmods.com/warhammer40000battlesister/mods/1) | [Steam](https://store.steampowered.com/app/1733890/Warhammer_40000_Battle_Sister/) [Oculus](https://www.oculus.com/experiences/rift/2728988973800701/) | [Floh](https://www.youtube.com/watch?v=p7T1vKIz-dY) | vest, arms, hands, Tactal |  |
+| [Falcon Age](https://www.nexusmods.com/falconage/mods/1) | [Steam](https://store.steampowered.com/app/1075080/Falcon_Age/) | [Floh](https://www.youtube.com/watch?v=rU06gFTyLns) | vest, arms, hands |  |
+| [AGAINST](https://www.nexusmods.com/against/mods/1) | [Steam](https://store.steampowered.com/app/1584840/AGAINST/) | [Floh](https://www.youtube.com/watch?v=lfRbeeK-Fnk) | vest, arms, hands |  |
+| [Space Pirate Trainer](https://www.nexusmods.com/spacepiratetrainer/mods/1) | [Steam](https://store.steampowered.com/app/418650/Space_Pirate_Trainer/) [Oculus](https://www.oculus.com/experiences/rift/1195983747083203/) | [Floh](https://www.youtube.com/watch?v=j5QzWcMtRKw) | vest, arms, hands |  |
+| [Shadow Legend VR](https://www.nexusmods.com/shadowlegendsvr/mods/1) | [Steam](https://store.steampowered.com/app/987230/Shadow_Legend_VR/) [Oculus](https://www.oculus.com/experiences/rift/2739977019349635/) | [Floh](https://www.youtube.com/watch?v=qMVIjL6HccQ) | vest, arms, hands, feet, Tactal |  |
+| [The Forest VR](https://www.nexusmods.com/theforest/mods/7/) | [Steam](https://store.steampowered.com/app/242760/The_Forest/) | [Floh](https://www.youtube.com/watch?v=ZcZUNvCM9cw) | vest, arms, hands |  |
+| [Stones Of Harlath](https://www.nexusmods.com/stonesofharlath/mods/1) | [Steam](https://store.steampowered.com/app/304870/Stones_of_Harlath/) [Oculus](https://www.oculus.com/experiences/rift/4854418817962909/) | [Floh](https://www.youtube.com/watch?v=2kjduQT_Tbk) | vest, arms, hands |  (now native) |
+| [Ironlights](https://www.nexusmods.com/ironlights/mods/1) | [Steam](https://store.steampowered.com/app/1245950/Ironlights/) [Oculus](https://www.oculus.com/experiences/rift/3959103380773871/) | [Floh](https://www.youtube.com/watch?v=1w32jtGbdKc) | vest, arms, hands, Tactal |  |
+| [Zombieland Headshot Fever](https://www.nexusmods.com/zombielandvrheadshotfever/mods/1) | [Steam](https://store.steampowered.com/app/1296970/Zombieland_VR_Headshot_Fever/) [Oculus](https://www.oculus.com/experiences/rift/4005463166137518) | [Floh](https://www.youtube.com/watch?v=8_tnmqsPiMU) | vest, arms, hands |  |
+| [Floor Plan 2](https://www.nexusmods.com/floorplan2/mods/1) | [Steam](https://store.steampowered.com/app/1534850/Floor_Plan_2/) [Oculus](https://www.oculus.com/experiences/rift/3447843535341632/) | [Floh](https://www.youtube.com/watch?v=6togjPXMmcY) | vest, arms, hands |  |
+| [Gun Club VR](https://www.nexusmods.com/gunclubvr/mods/1) | [Steam](https://store.steampowered.com/app/691320/Gun_Club_VR/) [Oculus](https://www.oculus.com/experiences/rift/1312908222125035/) | [Floh](https://www.youtube.com/watch?v=v-bglB1xNJo) | vest, arms, hands |  |
+| [Wands](https://www.nexusmods.com/wands/mods/1) | [Steam](https://store.steampowered.com/app/741400/Wands/) [Oculus](https://www.oculus.com/experiences/rift/1833318536683635/) | [Floh](https://www.youtube.com/watch?v=Y-dU8pkAB2g) | vest, arms, hands |  |
+| [Elven Assassin](https://www.nexusmods.com/elvenassassin/mods/1) | [Steam](https://store.steampowered.com/app/503770/Elven_Assassin/) [Oculus](https://www.oculus.com/experiences/rift/1155989791152285/) | [Floh](https://www.youtube.com/watch?v=AYCy2a3sli0) | vest |  |
+| [Vanishing Realms](https://www.nexusmods.com/vanishingrealms/mods/1) | [Steam](https://store.steampowered.com/app/322770/Vanishing_Realms/) | [Floh](https://www.youtube.com/watch?v=zLbIooIyyvI) | vest, arms, hands, feet, Tactal |  |
+| [Fruit Ninja VR 2](https://www.nexusmods.com/fruitninjavr2/mods/1) | [Steam](https://store.steampowered.com/app/1575520/Fruit_Ninja_VR_2/) | [Floh](https://www.youtube.com/watch?v=nogQd0n3JBU) | vest, arms, hands |  |
+| [Racket: Nx](https://www.nexusmods.com/racketnx/mods/1) | [Steam](https://store.steampowered.com/app/428080/Racket_Nx/) [Oculus](https://www.oculus.com/experiences/rift/1563751417029979/) | [Floh](https://www.youtube.com/watch?v=p3eM4Z_Xn44) | vest, arms, hands, feet |  |
+| [Beat Saber](https://github.com/Assistant/ModAssistant/releases) <br /> [Funtional](https://www.nexusmods.com/beatsaber/mods/12)/[Musical](https://www.nexusmods.com/beatsaber/mods/13/) | [Steam](https://store.steampowered.com/app/620980/Beat_Saber/) [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) | [Floh](https://www.youtube.com/watch?v=X15WuW8BiaM) | vest, arms, hands, Tactal, feet |  |
+| [Zenith](https://github.com/floh-bhaptics/Zenith_bhaptics) | [Steam](https://store.steampowered.com/app/1403370/Zenith_The_Last_City/) [Oculus](https://www.oculus.com/experiences/rift/3476054399136890/) | [Floh](https://www.youtube.com/watch?v=TBF0PlZaUVw) | vest, arms, hands | (now native) |
+| [Gorilla Tag](https://www.nexusmods.com/gorillatag/mods/11) | [Steam](https://store.steampowered.com/app/1533390/Gorilla_Tag/) [Oculus](https://www.oculus.com/experiences/rift/3262063300561328/) | | vest, arms, hands |  |
+| [Fruit Ninja VR](https://www.nexusmods.com/fruitninjavr/mods/1) | [Steam](https://store.steampowered.com/app/486780/Fruit_Ninja_VR/) [Oculus](https://www.oculus.com/experiences/rift/1332617726752141/) | [Floh](https://www.youtube.com/watch?v=tMfNG0D0Z04) | vest, arms, hands |  |
+| [OUTLIER](https://www.nexusmods.com/outlier/mods/1) | [Steam](https://store.steampowered.com/app/1596690/OUTLIER/) | [Floh](https://www.youtube.com/watch?v=v47M7MI0wZE) | vest, arms, hands |  |
+| [Sword Reverie](https://www.nexusmods.com/swordreverie/mods/1) | [Steam](https://store.steampowered.com/app/1377430/Sword_Reverie/) [Oculus](https://www.oculus.com/experiences/rift/2788402601249510/) | [Floh](https://www.youtube.com/watch?v=71JoC6NugFw) | vest, arms, hands |  |
+| [Vengeful Rites](https://www.nexusmods.com/vengefulrites/mods/1) | [Steam](https://store.steampowered.com/app/755410/Vengeful_Rites/) [Oculus](https://www.oculus.com/experiences/rift/1608154952629346) | [Floh](https://www.youtube.com/watch?v=hDZGSJgRBSI) | vest, arms, hands |  |
+| [Rush](https://www.nexusmods.com/rush/mods/1) | [Steam](https://store.steampowered.com/app/844040/RUSH/) [Oculus](https://www.oculus.com/experiences/rift/1972405206119760/) | [Floh](https://www.youtube.com/watch?v=NNkKas2iXUs) | vest |  |
+| [Garden Of The Sea](https://www.nexusmods.com/gardenofthesea/mods/1) | [Steam](https://store.steampowered.com/app/1086850/Garden_of_the_Sea/) | [Floh](https://www.youtube.com/watch?v=diS-2FZ-nXU) | vest, arms, hands |  |
+| [Cooking Simulator VR](https://www.nexusmods.com/cookingsimulatorvr/mods/1) | [Steam](https://store.steampowered.com/app/1358140/Cooking_Simulator_VR/) | [Floh](https://www.youtube.com/watch?v=SM7-er_mZHA) | vest, arms, hands |  |
+| [The Living Remain](https://www.nexusmods.com/thelivingremain/mods/1) | [Steam](https://store.steampowered.com/app/594220/The_Living_Remain/) | [Floh](https://www.youtube.com/watch?v=DUpjFfI-yVI) | vest, arms, hands | (now native) |
+| [Arizona Sunshine](https://www.nexusmods.com/arizonasunshine/mods/1) | [Steam](https://store.steampowered.com/app/342180/Arizona_Sunshine/) [Oculus](https://www.oculus.com/experiences/rift/872183756232656/) | [Floh](https://www.youtube.com/watch?v=UwA6HljX4SE) | vest, arms, hands, feet |  |
+| [AUDICA](https://www.nexusmods.com/audica/mods/1) | [Steam](https://store.steampowered.com/app/1020340/AUDICA_Rhythm_Shooter/) [Oculus](https://www.oculus.com/experiences/rift/2172302616173639/) | [Floh](https://www.youtube.com/watch?v=U4xvSUToIlM) | vest, arms, hands |  |
+| [A Blind Legend](https://www.nexusmods.com/ablindlegend/mods/1) | [Steam](https://store.steampowered.com/app/437530/A_Blind_Legend/) | -- | vest, arms, hands |  |
+| [Shadowgate VR](https://www.nexusmods.com/shadowgatetheminesofmythrok/mods/1) | [Steam](https://store.steampowered.com/app/1822970/) [Oculus](https://www.oculus.com/experiences/rift/4260024320768715/) | [Floh](https://www.youtube.com/watch?v=Kmc3eyxn8A0) | vest, arms, hands |  |
+| [BoomBox](https://github.com/floh-bhaptics/BoomBox_bhaptics) | [Steam](https://store.steampowered.com/app/1485120/BoomBox/) | | vest, arms, hands | (now native) |
+| [Audio Trip](https://github.com/floh-bhaptics/AudioTrip_bhaptics) | [Steam](https://store.steampowered.com/app/826540/) [Oculus](https://www.oculus.com/experiences/rift/2580325682015862/) | | vest, arms, hands, feet | (now native) |
+| [Bonelab](https://github.com/floh-bhaptics/Bonelab_bhaptics) | [Steam](https://store.steampowered.com/app/1592190/) [Oculus](https://www.oculus.com/experiences/rift/5088709007839657) |  | vest, arms, hands, Tactal |  |
+| [Vertigo 2](https://www.nexusmods.com/vertigo2/mods/1) | [Steam](https://store.steampowered.com/app/843390/Vertigo_2/) |  | vest, arms, hands, feet, Tactal | (now native) |
+| [RUINSMAGUS](https://www.nexusmods.com/ruinsmagus/mods/2) | [Steam](https://store.steampowered.com/app/1701560/RUINSMAGUS/) |  | vest, arms, hands | (now native) |
+| [Broken Edge](https://www.nexusmods.com/brokenedge/mods/1) | [Steam](https://store.steampowered.com/app/1947070/Broken_Edge/) | | vest, arms, hands | (coming natively) |
+| [RESIST](https://www.nexusmods.com/resist/mods/1) | [Steam](https://store.steampowered.com/app/1914750/Resist/) [Oculus](https://www.oculus.com/experiences/rift/5060469207355477/) | | vest, arms |  |
+| [Keep Talking and Nobody Explodes](https://www.nexusmods.com/keeptalkingandnobodyexplodes/mods/1) | [Steam](https://store.steampowered.com/app/341800/Keep_Talking_and_Nobody_Explodes/) [Oculus](https://www.oculus.com/experiences/rift/818716001584299/) | | vest, arms |  |
+| [Drunkn Bar Fight](https://www.nexusmods.com/drunknbarfight/mods/1) | [Steam](https://store.steampowered.com/app/528550/Drunkn_Bar_Fight/) [Oculus](https://www.oculus.com/experiences/rift/1207497572657758/) | | vest |  |
+| [Vox Machinae](https://www.nexusmods.com/voxmachinae/mods/1) | [Steam](https://store.steampowered.com/app/334540/Vox_Machinae/) [Oculus](https://www.oculus.com/experiences/rift/957951994279023/) | | vest |  |
+| [Barbaria](https://www.nexusmods.com/barbaria/mods/1) | [Steam](https://store.steampowered.com/app/1984610/Barbaria/) [Oculus](https://www.oculus.com/experiences/rift/4002434216527968/) | | vest, arms |  |
+| [Paradox of Hope](https://www.nexusmods.com/paradoxofhope/mods/1) | [Steam](https://store.steampowered.com/app/1702840/Paradox_of_Hope_VR/) | | vest, arms |  |
+| [The Light Brigade](https://www.nexusmods.com/thelightbrigade/mods/1) | [Steam](https://store.steampowered.com/app/1579880/The_Light_Brigade/) | | vest, arms, hands, feet, Tactal | (coming natively) |
+| [Arizona Sunshine 2](https://www.nexusmods.com/arizonasunshine2/mods/1) | [Steam](https://store.steampowered.com/app/1540210/Arizona_Sunshine_2/) | | vest, arms, hands, feet, Tactal | (now native) |
+| [Underdogs](https://www.nexusmods.com/underdogs/mods/2) | [Steam](https://store.steampowered.com/app/2441700/UNDERDOGS/) | | vest, arms | (coming natively) |
+| [CONVRGENCE](https://www.nexusmods.com/convrgence/mods/1) | [Steam](https://store.steampowered.com/app/2609610/CONVRGENCE/) | | vest, arms |  |
+| [Soul Covenant](https://www.nexusmods.com/soulcovenant/mods/1) | [Steam](https://store.steampowered.com/app/2237740/SOUL_COVENANT/) | | vest, arms |  |
 
-## English
 
-### What it does
-
-- **Japanese subtitles** — 12,358 hand-translated lines covering every
-  character in the campaign and in matches. Displays inside the VR headset
-  (OpenVR overlay) or on the desktop, chosen automatically from the game's
-  own VR mode.
-- **Yaw2 motion output** — walking bounce synced to footfalls, landing
-  impacts scaled by fall speed, damage shake, lateral G while turning, jet
-  thrust and weapon recoil, sent to YawVR GameLink over UDP on 24 channels.
-- **Per-mech tuning** — nine JSON profiles (Catalyst, Decker, Dredge, Drill,
-  Goldrush, Hopper, Overhaul, Rook, Scout) with commented parameters.
-- **Ready-tuned GameLink profile** included, so GameLink works out of the box.
-
-The two halves are independent: install the subtitles alone if you have no
-Yaw2.
-
-### Install
-
-1. Download the latest release zip and extract it anywhere.
-2. Run the installer (`インストール.bat`). It locates your Steam install
-   from the registry and `libraryfolders.vdf`, backs up anything it
-   overwrites, and switches its own messages to English on non-Japanese
-   Windows.
-3. Launch YawVR GameLink, load the **Vox Machinae 24ch** profile, press
-   START, then launch the game from Steam.
-
-**Requirements:** Windows 10/11 x64, Vox Machinae (Steam),
-[.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0).
-MelonLoader is bundled. Yaw2 and YawVR GameLink are only needed for motion.
-
-The first launch takes a few minutes while MelonLoader analyses the game.
-
-See `README_EN.txt` in the release for full documentation, the channel map,
-tuning notes and troubleshooting.
-
-### Building from source
-
-```
-dotnet build   -c Release -p:GamePath="<path to Vox Machinae>"    # VoxSubtitle, VoxTelemetry
-dotnet publish -c Release -o publish_fd                          # overlays
-```
-
-The mod projects reference `MelonLoader\net6\MelonLoader.dll`, `0Harmony.dll`
-and the IL2CPP-generated `Assembly-CSharp.dll` from your own game folder.
-Those are not redistributed here.
-
-### Licence
-
-MIT for the author's own code — see [LICENSE](LICENSE). Bundled third-party
-software keeps its own licence; see `THIRD-PARTY-NOTICES_EN.txt` in the
-release.
-
-Unofficial and unaffiliated with Space Bullet Dynamics Corporation or YawVR.
-Please do not contact either company about this mod.
-
----
-
-## 日本語
-
-### 何をするMODか
-
-- **日本語字幕** — キャンペーンと対戦中の台詞を手作業で翻訳した12,358行。
-  全キャラクター対応。ゲーム本体のVRモードを読み取り、VR内（OpenVRオーバー
-  レイ）とデスクトップを自動で切り替えて表示します。
-- **Yaw2連動** — 歩行の接地に同期した縦揺れ、落下速度に比例する着地衝撃、
-  被弾の揺れ、旋回の横G、ジェット噴射、武器の反動を24チャンネルに分けて
-  YawVR GameLink へUDP送信します。
-- **機体別の味付け** — 9機体ぶんのJSONプロファイル（Catalyst / Decker /
-  Dredge / Drill / Goldrush / Hopper / Overhaul / Rook / Scout）。
-  各値に日本語の説明コメント付き。
-- **調整済みGameLinkプロファイル同梱** — 読み込むだけで動きます。
-
-字幕と連動は独立しているので、Yaw2をお持ちでなければ字幕だけ使えます。
-
-### 導入
-
-1. 最新リリースのzipをダウンロードし、好きな場所に展開します。
-2. `インストール.bat` を実行します。レジストリと `libraryfolders.vdf` から
-   Steamの導入先を自動検出し、上書きするファイルをバックアップします。
-3. YawVR GameLink を起動して **Vox Machinae 24ch** プロファイルを読み込み、
-   START を押してから、Steamでゲームを起動します。
-
-**必要なもの:** Windows 10/11 x64、Vox Machinae（Steam）、
-[.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)。
-MelonLoaderは同梱済み。Yaw2とGameLinkは連動を使う場合のみ必要です。
-
-初回起動はMelonLoaderの解析に数分かかります。
-
-チャンネル表、調整方法、トラブルシュートはリリース内の `README.txt` に
-すべて書いてあります。
-
-### ライセンス
-
-作者が書いたコードはMIT（[LICENSE](LICENSE)）。同梱している第三者
-ソフトウェアはそれぞれのライセンスに従います。
-
-Space Bullet Dynamics Corporation および YawVR とは無関係の非公式MODです。
-不具合のお問い合わせを両社へ行わないようお願いします。
-
----
-
-## サードパーティ素材について / Third-party assets
-
-`VoxMachinaePlugin/Image/` の画像（`logo.png` / `recent.png` / `wide.png`）は、
-YawVR GameLink のプラグイン一覧で対象ゲームを識別するためのアイコンとして使用しています。
-これらは Vox Machinae の公式アートワークであり、著作権は
-Space Bullet Dynamics Corporation に帰属します。
-**本リポジトリの MIT ライセンスは、これらの画像には適用されません。**
-権利者からの申し出があれば速やかに差し替え／削除します。
-
-同梱している MelonLoader / XUnity.AutoTranslator / UniverseLib などの
-第三者コンポーネントのライセンスは、配布パッケージ内の
-`THIRD-PARTY-NOTICES.txt` を参照してください。
-
-The images under `VoxMachinaePlugin/Image/` (`logo.png` / `recent.png` / `wide.png`)
-are used only as plugin icons in the YawVR GameLink plugin list, to identify the
-target game. They are official Vox Machinae artwork and remain the property of
-Space Bullet Dynamics Corporation. **The MIT license of this repository does not
-apply to these images.** They will be replaced or removed promptly upon request
-from the rights holder.
-
-For the licenses of bundled third-party components (MelonLoader,
-XUnity.AutoTranslator, UniverseLib, etc.), see `THIRD-PARTY-NOTICES.txt`
-in the distribution package.
+<!---
+floh-bhaptics/floh-bhaptics is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
